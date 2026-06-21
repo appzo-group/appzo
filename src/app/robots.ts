@@ -5,7 +5,11 @@ export default function robots(): MetadataRoute.Robots {
         rules: [
             {
                 userAgent: "*",
-                allow: "/",
+                allow: [
+                    "/",
+                    "/sitemap.xml",
+                    "/robots.txt"
+                ],
                 disallow: [
                     "/*",
                     "/api/",
@@ -13,5 +17,6 @@ export default function robots(): MetadataRoute.Robots {
                 ],
             },
         ],
+        sitemap: "https://appzo.app/sitemap.xml",
     };
 }
